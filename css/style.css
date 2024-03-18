@@ -1,0 +1,189 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Work Sans", sans-serif;
+  background-color: #3e3c3c;
+  margin: 0; /* Reset default body margin */
+  padding: 0; /* Reset default body padding */
+}
+
+.container {
+  padding: 10px;
+}
+
+.container .header {
+  text-align: center;
+  font-size: 25px;
+  color: white;
+}
+
+.container .content {
+  display: flex;
+  flex-direction: column;
+}
+
+.container .inputs {
+  padding-bottom: 10px;
+}
+
+.container .inputs input[type="text"],
+.container .inputs input[type="number"],
+.container .outputs input[type="text"] {
+  padding: 10px;
+  width: 100%;
+  border-radius: 7px;
+  margin-bottom: 10px;
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+
+}
+
+.container .inputs .price_info input {
+  padding: 10px;
+  border-radius: 7px;
+  margin-bottom: 10px;
+  background-color: black;
+  color: white;
+  font-weight: bold;
+}
+
+.container .inputs #total {
+  padding: 10px;
+  background-color: crimson;
+  color: white;
+  font-weight: bold;
+}
+
+.container .inputs .create-btn,
+.deleteAll-btn,
+.update-btn {
+  padding: 10px;
+  background-color: crimson;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.update-btn,
+.deleteAll-btn {
+  display: none;
+}
+
+.container .seach-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 10px;
+
+}
+
+.container .seach-info div {
+  background-color: crimson;
+  padding: 10px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+table {
+  width: 100%;
+  text-align: center;
+  margin: 10px 0;
+  color: white;
+}
+
+table tbody tr th {
+  background-color: crimson;
+  color: white;
+  padding: 10px;
+}
+
+table tbody tr td {
+  padding: 20px;
+}
+
+table button {
+  background-color: crimson;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* Media query for screens with a maximum width of 600px */
+@media (max-width: 600px) {
+  .container {
+      padding: 5px; /* Adjust padding as needed */
+  }
+
+  .header h3 {
+      font-size: 1.5rem; /* Adjust font size as needed */
+  }
+
+  .container .content {
+      align-items: center; /* Center content vertically */
+  }
+
+  .container .inputs {
+      width: 100%; /* Make inputs take full width */
+  }
+
+  .price_info {
+      display: flex;
+      flex-wrap: wrap;
+  }
+
+  .price_info input {
+      flex: 1; /* Make inputs take full width in price_info */
+      margin-right: 0; /* Remove margin-right for inputs in price_info */
+      margin-bottom: 5px; /* Adjust margin as needed */
+  }
+
+
+}
+/* Media query for screens with a maximum width of 600px */
+@media (max-width: 600px) {
+  .outputs {
+    overflow-x: auto; /* Enable horizontal scrolling for small screens */
+    padding-left: 134px;
+    }
+
+  .outputs input[type="text"] {
+    width: calc(100% - 20px); /* Adjust width to accommodate padding */
+    margin-bottom: 10px; /* Add margin-bottom for better spacing */
+  }
+
+  .container .seach-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Ensure buttons are properly spaced */
+    padding: 10px 0; /* Add padding to the search info container */
+    flex-direction: column;
+  }
+
+  .seach-info div {
+    flex-basis: calc(50% - 5px); /* Adjust button width */
+    margin-bottom: 10px; /* Add margin-bottom for better spacing */
+  }
+  table th,
+  table td {
+    padding: 8px; /* Adjust padding for table cells */
+    font-size: 10px; /* Adjust font size for table content */
+  }
+  table {
+    width: 100%; /* Ensure table takes full width */
+    margin-top: 20px; /* Add margin-top for better spacing */
+  }
+}

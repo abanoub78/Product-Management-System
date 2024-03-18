@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Mamgement System</title>
+    <!-- Main Template CSS File -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Render All Elements Normally -->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600;700;800&#038;display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h3>Product Mamgement System</h3>
+      </div>
+      <div class="content">
+      <div class="inputs">
+        <input type="text" placeholder="Product Title" id="title">
+        <div class="price_info">
+          <input onkeyup="getTotal()" type="number" placeholder="Price" id="price">
+          <input onkeyup="getTotal()" type="number" placeholder="Taxes" id="taxes">
+          <input onkeyup="getTotal()" type="number" placeholder="ads" id="ads">
+          <input onkeyup="getTotal()" type="number" placeholder="Discount" id="discount">
+          <span id="total">Total = <span id="num"></span></span>
+
+        </div>
+        <input type="number" placeholder="Count" id="count">
+        <!-- <br> -->
+        <input type="text" placeholder="Category" id="Category">
+        <div class="create-btn">Create</div>
+        <div class="update-btn">Update</div>
+      </div>
+      <div class="outputs">
+        <input onkeyup="searchData(this.value)" type="text" placeholder="Search" id="Search">
+        <div class="seach-info">
+          <div onclick="getSearchMood(this.id)" id="searchTitle" class="searchTitle-btn">Search By Title</div>
+          <div onclick="getSearchMood(this.id)" id="searchcategry" class="searchCategry-btn">Search By Category</div>
+        </div>
+        <div class="deleteAll-btn"></div>
+        <table>
+          <tr>
+            <th>Id</th>
+            <th>Title</th>
+            <th>Price</th>
+            <th>Taxes</th>
+            <th>Ads</th>
+            <th>Discount</th>
+            <th>Total</th>
+            <th>Category</th>
+            <th>Update</th>
+            <th>Delete</th>
+          </tr>
+          <tbody id="tbody">
+          </tbody>
+        </table>
+      </div>
+    </div>
+    </div>
+<script src="javaScript/script.js"></script>
+  </body>
+</html>  
